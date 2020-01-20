@@ -1,0 +1,58 @@
+---
+
+name: Getting Started
+route: /getting-started
+
+---
+
+import Props from "./props.js";
+
+# Getting Started
+
+## Installation
+
+`npm i react-toggle-switch`
+
+## Basic usage
+
+```jsx
+import React, { Component } from "react";
+import { ToggleButton } from "react-toggle-button";
+
+export default class App extends Component {
+  state = {
+    toggleState: null
+  };
+
+  handleChange = toggleState => {
+    this.setState({ toggleState });
+  };
+
+  render() {
+    const { toggleState } = this.state;
+    return (
+         <ToggleButton
+         buttonDesign={ takes 3 values `rounded`, `angled`, `custom` }
+         textData={ stateOne: value of stateOne, stateTwo: value of stateTwo, stateThree: value of stateThree }
+         initState={ the initial state of the toggle button, takes a boolean in case of 2 states and takes integers 1,2,3 in case of 3 state switch}
+         onChange={ A callback function that is invoked every time a state change occurs }
+         classNames={ container: custom class for container, slider: custom class for slider }
+         id={ id of the toggle switch in question }
+         togglerWidth={ number that specifies the width of the switch knob }
+         buttonStates={ integer that specifies the number of states }
+         fontSize={ string that specifies the fontSize of the data on the knob }
+         togglerTheme={ an array of objects for each state { knob: knob color, bg: background color, color: text color } }
+         buttonRadius={ container: container radius, slider: slider radius }
+         overrideInternalStyles: { takes a boolean, passing false overrides all internal library styles and gives complete control to the user}
+        />
+    );
+  }
+}
+
+```
+
+## Props
+
+<Props />
+
+

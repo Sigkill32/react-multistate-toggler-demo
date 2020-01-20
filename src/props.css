@@ -1,0 +1,29 @@
+.OuterContainer {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  background-color: #FCFBFA;
+  color: #2D3747;
+  font-size: 20px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+table td,
+th {
+  border: 1px solid #d8d8d8;
+  text-align: left;
+  padding: 8px;
+}
+a{
+    color: #0B5FFF;
+  text-decoration: none;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

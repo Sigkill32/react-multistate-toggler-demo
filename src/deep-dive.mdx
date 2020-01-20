@@ -1,0 +1,65 @@
+---
+
+name: Deep Dive
+route: /deep-dive
+
+---
+
+# Deep Dive
+
+## Multiple states of the toggle switch
+
+The library allows you to create toggle switches with 3 states as well as 2 states.
+
+**Toggle switch with 2 states**
+
+- The toggle button with 2 states toggles between two boolean states: `true` and `false`.
+- The `onChange` function in this case returns either true or false on every change in state.
+- You may pass either true or false as `initState` value.
+- `buttonStates` by default is set to 2.
+- Length of `togglerTheme` in this case will be 2.
+
+Please refer the example section to get better insights.
+
+**Toggle switch with 3 states**
+
+- The button in this case toggles between 3 states which are internally represented by integers 1, 2 and 3.
+- The `onChange` function in this case returns either 1, 2 or 3 on every change in state.
+- You may pass 1, 2 or 3 as `initState` value.
+- `buttonStates` should be set to 3 to activate toggle switch with 3 states.
+- Length of `togglerTheme` in this case will be 3.
+
+## The `onChange` function
+
+`onChange` is a callback function that is invoked after each state change. This callback is returned with an argument that contains points to the current state of the switch.
+
+**Usage**
+
+```jsx
+export default class App extends Component {
+  state = {
+    toggleState: 1
+  };
+
+  handleChange = toggleState => {
+    this.setState({ toggleState });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>Choose your gender <span>{this.state.toggleState}</span></p>
+        <ToggleButton
+          onChange={this.handleChange}
+          initState={3}
+          ....
+        />
+      </div>
+    );
+  }
+}
+```
+
+## The `overrideInternalStyles` option
+
+`overrideInternalStyles` option lets you take full control of the look and feel of toggle switch. By setting `classNames` prop with desired classNames and by setting `overrideInternalStyles` to `false` will reset internal styles and let you define style the switch with classNames that you've defined.
