@@ -12,7 +12,7 @@ const Props = () => {
       <tr>
         <td>buttonDesign</td>
         <td>string</td>
-        <td>rounded</td>
+        <td>'rounded'</td>
         <td>specifies the style of the button.</td>
       </tr>
       <tr>
@@ -74,7 +74,7 @@ const Props = () => {
           }
         </td>
         <td>
-          An array of objects that mentions the look of the switch in for each
+          An array of objects that determines the look of the switch in for each
           state
         </td>
       </tr>
