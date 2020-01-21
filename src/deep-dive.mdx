@@ -45,10 +45,16 @@ export default class App extends Component {
     this.setState({ toggleState });
   };
 
+  getGender = () => {
+    const { toggleState } = this.state;
+    const genders = ['Female', 'Male', 'Trans'];
+    return genders[toggleState - 1];
+  }
+
   render() {
     return (
       <div>
-        <p>Choose your gender <span>{this.state.toggleState}</span></p>
+        <p>Choose your gender <span>{this.getGender()}</span></p>
         <ToggleButton
           onChange={this.handleChange}
           initState={3}
